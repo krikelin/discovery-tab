@@ -1,0 +1,31 @@
+﻿package com.spotify.protocol;
+
+message resource {
+	required string uri = 1;
+	required string name = 2;
+	required string cover = 3;
+}
+
+message artist : resource {
+	required int year = 1;
+
+}
+message album : resource {
+	required artist artist;
+}
+message song : resource {
+	required repeated artist artists = 1;
+	required release release = 2;
+}
+
+message event {
+	enum Action {
+		LIKE = 0;
+		PLAY = 1;
+		STAR = 2;
+		FOLLOW = 4;
+	}
+	required resource subject = 1;
+	required resource predicate = 2;
+	required Action action = 3;
+}

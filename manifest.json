@@ -1,0 +1,15 @@
+{
+	"AppName": {
+		"en":"Discover"
+	},
+	"BundleType": "Application",
+	"VendorIdentifier":"se.krikelin",
+	"BundleIdentifier":"discover",
+	"SupportedLanguages":["en"],
+	"Dependencies": {
+	      "api": "1.10.2",
+	      "views": "1.18.1"
+    },
+	"RequiredPermissions":["*"]
+}
+	
